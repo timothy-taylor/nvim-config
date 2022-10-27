@@ -13,6 +13,6 @@ null_ls.setup({
 	sources = {
 		formatting.stylua,
 		formatting.prettier,
-    --[[ diagnostics.eslint, ]]
+		--[[ diagnostics.eslint, ]]
 	},
 })

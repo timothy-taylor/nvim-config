@@ -1,8 +1,8 @@
 local servers = {
 	"sumneko_lua",
 	"jsonls",
-  "tsserver",
-  "rust_analyzer",
+	"tsserver",
+	"rust_analyzer",
 }
 
 local settings = {
