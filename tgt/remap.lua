@@ -6,6 +6,7 @@ n("<leader>w", "<cmd>w<CR>")
 n("<leader>pv", "<cmd>Ex<CR>")
 n("<leader>e", "<cmd>Lex 30<CR>")
 n("<leader>f", "<cmd>FZF<CR>")
+n("<leader>v", "<cmd>vsplit<CR>")
 
 -- simplified split window navigation Ctrl-{h,j,k,l}
 n("<C-h>", "<C-w>h")
