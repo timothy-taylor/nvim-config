@@ -21,6 +21,7 @@ return packer.startup(function(use)
 	use("junegunn/fzf")
 	use("windwp/nvim-autopairs")
   use("goolord/alpha-nvim")
+  use("RRethy/vim-illuminate")
 
 	-- completion
 	use("hrsh7th/nvim-cmp")

@@ -20,6 +20,10 @@ n("<C-S-Up>", "<cmd>resize +2<CR>")
 n("<C-S-Right>", "<cmd>vertical resize -2<CR>")
 n("<C-S-Left>", "<cmd>vertical resize +2<CR>")
 
+-- navigate references
+n("<a-n>", '<cmd>lua require"illuminate".next_reference{wrap=true}<CR>')
+n("<a-p>", '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<CR>')
+
 --[[ -- navigate buffers
 n("<S-l>", "<cmd>bnext<CR>")
 n("<S-h>", "<cmd>bprevious<CR>")
