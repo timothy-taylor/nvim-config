@@ -1,6 +1,6 @@
 local o = vim.opt
 
-o.guicursor = ""
+--o.guicursor = ""
 o.nu = true
 o.relativenumber = true
 o.expandtab = true
@@ -17,7 +17,7 @@ o.termguicolors = true
 o.ignorecase = true
 o.mouse = "a"
 o.pumheight = 10
-o.showmode = false
+--o.showmode = false
 o.showtabline = 2
 o.smartcase = true
 o.splitbelow = true

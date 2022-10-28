@@ -20,6 +20,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("junegunn/fzf")
 	use("windwp/nvim-autopairs")
+  use("goolord/alpha-nvim")
 
 	-- completion
 	use("hrsh7th/nvim-cmp")
