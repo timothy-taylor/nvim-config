@@ -10,5 +10,5 @@ illuminate.configure {
     "alpha",
     "packer"
   },
-  under_cursor = true,
+  under_cursor = false,
 }
