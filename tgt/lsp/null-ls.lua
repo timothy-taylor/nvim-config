@@ -12,7 +12,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.stylua,
-		formatting.prettier,
+		formatting.prettier.with({ extra_filetypes = { "astro", "svelte" }}),
     formatting.rustfmt,
 		--[[ diagnostics.eslint, ]]
 	},
