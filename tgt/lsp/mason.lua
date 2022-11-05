@@ -3,6 +3,7 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"rust_analyzer",
+  "astro"
 }
 
 local settings = {
