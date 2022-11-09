@@ -3,7 +3,7 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"rust_analyzer",
-  "astros",
+  "astro",
   "svelte",
 }
 
