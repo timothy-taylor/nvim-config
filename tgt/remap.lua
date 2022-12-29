@@ -2,7 +2,7 @@ local n = require("tgt.keymap").nnoremap
 local v = require("tgt.keymap").vnoremap
 
 n("<leader>l", "<cmd>lua vim.lsp.buf.format({ timeout = 2000 })<CR>")
-n("<leader>w", "<cmd>w<CR>")
+n("<leader>s", "<cmd>w<CR>")
 n("<leader>pv", "<cmd>Ex<CR>")
 n("<leader>e", "<cmd>Lex 30<CR>")
 n("<leader>f", "<cmd>FZF<CR>")
