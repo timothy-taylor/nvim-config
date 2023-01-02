@@ -21,15 +21,17 @@ dashboard.section.buttons.val = {
 	dashboard.button("o", "Open file browser", ":Ex<CR>"),
 	dashboard.button("f", "Find file", ":FZF<CR>"),
 	dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("c", "Config", ":e $MYVIMRC <CR>"),
 	dashboard.button("q", "Quit", ":qa<CR>"),
 }
 
 local function footer()
-  local handle = io.popen('./obliquestrategies.sh')
-  local result = handle:read("*a")
-  handle:close()
-  return result
+	local handle = io.popen("./obliquestrategies.sh")
+	if handle then
+		local result = handle:read("*a")
+		handle:close()
+		return result
+	end
+  return ""
 end
 
 dashboard.section.footer.val = footer()
