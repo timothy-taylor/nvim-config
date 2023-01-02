@@ -1,26 +1,35 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-  return
+	return
 end
 
-local dashboard = require "alpha.themes.dashboard"
+local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-  [[                               __                ]],
-  [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-  [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-  [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-  [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-  [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+	[[       _            _            _       ]],
+	[[      /\ \         /\ \         /\ \     ]],
+	[[      \_\ \       /  \ \        \_\ \    ]],
+	[[      /\__ \     / /\ \_\       /\__ \   ]],
+	[[     / /_ \ \   / / /\/_/      / /_ \ \  ]],
+	[[    / / /\ \ \ / / / ______   / / /\ \ \ ]],
+	[[   / / /  \/_// / / /\_____\ / / /  \/_/ ]],
+	[[  / / /      / / /  \/____ // / /        ]],
+	[[ / / /      / / /_____/ / // / /         ]],
+	[[/_/ /      / / /______\/ //_/ /          ]],
+	[[\_\/       \/___________/ \_\/           ]],
 }
 dashboard.section.buttons.val = {
-  dashboard.button("o", "Open file browser", ":Ex<CR>"),
-  dashboard.button("f", "Find file", ":FZF<CR>"),
-  dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("c", "Config", ":e $MYVIMRC <CR>"),
-  dashboard.button("q", "Quit", ":qa<CR>"),
+	dashboard.button("o", "Open file browser", ":Ex<CR>"),
+	dashboard.button("f", "Find file", ":FZF<CR>"),
+	dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
+	dashboard.button("c", "Config", ":e $MYVIMRC <CR>"),
+	dashboard.button("q", "Quit", ":qa<CR>"),
 }
+
 local function footer()
-  return "tgt"
+  local handle = io.popen('./obliquestrategies.sh')
+  local result = handle:read("*a")
+  handle:close()
+  return result
 end
 
 dashboard.section.footer.val = footer()
