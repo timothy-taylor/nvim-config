@@ -25,7 +25,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-	local handle = io.popen("./obliquestrategies.sh")
+	local handle = io.popen("obliquestrategies.sh")
 	if handle then
 		local result = handle:read("*a")
 		handle:close()

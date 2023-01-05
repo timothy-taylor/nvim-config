@@ -14,6 +14,6 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.prettier.with({ extra_filetypes = { "astro", "svelte" }}),
     formatting.rustfmt,
-		--[[ diagnostics.eslint, ]]
+--[[     diagnostics.eslint, ]]
 	},
 })
