@@ -1,12 +1,16 @@
 local n = require("tgt.keymap").nnoremap
 local v = require("tgt.keymap").vnoremap
 
+-- code formatting
 n("<leader>l", "<cmd>lua vim.lsp.buf.format({ timeout = 2000 })<CR>")
-n("<leader>s", "<cmd>w<CR>")
-n("<leader>pv", "<cmd>Ex<CR>")
+-- open a vertical file explorer on the left side
 n("<leader>e", "<cmd>Lex 30<CR>")
+-- fuzzy finder
 n("<leader>f", "<cmd>FZF<CR>")
-n("<leader>v", "<cmd>vsplit<CR>")
+
+-- navigate references
+n("<leader>n", '<cmd>lua require"illuminate".goto_next_reference(true)<CR>')
+n("<leader>b", '<cmd>lua require"illuminate".goto_prev_reference(true)<CR>')
 
 -- simplified split window navigation Ctrl-{h,j,k,l}
 n("<C-h>", "<C-w>h")
@@ -20,15 +24,7 @@ n("<C-S-Up>", "<cmd>resize +2<CR>")
 n("<C-S-Right>", "<cmd>vertical resize -2<CR>")
 n("<C-S-Left>", "<cmd>vertical resize +2<CR>")
 
--- navigate references
-n("<leader>n", '<cmd>lua require"illuminate".goto_next_reference(true)<CR>')
-n("<leader>b", '<cmd>lua require"illuminate".goto_prev_reference(true)<CR>')
-
---[[ -- navigate buffers
-n("<S-l>", "<cmd>bnext<CR>")
-n("<S-h>", "<cmd>bprevious<CR>")
- ]]
-
+-- normal function overrides
 -- pastes don't clear the buffer hack
 v("p", '"_dP')
 
