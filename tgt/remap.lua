@@ -35,3 +35,9 @@ v("p", '"_dP')
 -- tabbing doesn't clear selection
 v("<", "<gv")
 v(">", ">gv")
+
+-- center the buffer on the screen on jumpy things
+n("<C-d>", "<C-d>zz")
+n("<C-u>", "<C-u>zz")
+n("n", "nzz")
+n("N", "Nzz")
