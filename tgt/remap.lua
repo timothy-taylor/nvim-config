@@ -5,7 +5,7 @@ local v = require("tgt.keymap").vnoremap
 n("<leader>l", "<cmd>lua vim.lsp.buf.format({ timeout = 5000 })<CR>")
 -- open a vertical file explorer on the left side
 n("<leader>e", "<cmd>Lex 30<CR>")
--- fuzzy finder
+-- fuzzy finder, ctrl-v to open file in vertical split
 n("<leader>f", "<cmd>FZF<CR>")
 
 -- navigate references

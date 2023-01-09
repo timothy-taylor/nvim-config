@@ -61,14 +61,12 @@ local function lsp_keymaps(bufnr)
 	local m = vim.api.nvim_buf_set_keymap
 	local opts = { noremap = true, silent = true }
 	-- get various info: g+{D,d,i,l,r}
-	m(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	m(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	m(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	--m(bufnr, "n", "gD", "<cmd>:vsplit | lua vim.lsp.buf.declaration()<CR>", opts)
+	--m(bufnr, "n", "gd", "<cmd>:vsplit | lua vim.lsp.buf.definition()<CR>", opts)
+	m(bufnr, "n", "gi", "<cmd>:vsplit | lua vim.lsp.buf.implementation()<CR>", opts)
 	m(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded" })<CR>', opts)
 	m(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	-- type and signature info: {Shift, Ctrl}+k
-	m(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	m(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	m(bufnr, "n", "gk", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	-- rename
 	m(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 	-- move through diagnostics {[,]}+d
