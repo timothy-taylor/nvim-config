@@ -3,4 +3,22 @@ if not status_ok then
 	return
 end
 
-mind.setup()
+local config = {
+	ui = {
+    empty_indent_marker = "│",
+    node_indent_marker = "└",
+		root_marker = " ☰ ",
+		data_marker = " ⛁ ",
+		url_marker = " ☎ ",
+		select_marker = "←",
+		icon_preset = {
+      { "☕ ", "Journal"},
+      { "✎ ", "Notes"},
+      { "☐ ", "Todos"},
+      { "☑ ", "Done"},
+      { "☓ ", "Cancelled"},
+		},
+	},
+}
+
+mind.setup(config)
