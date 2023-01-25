@@ -12,7 +12,6 @@ local config = {
 		url_marker = " ☎ ",
 		select_marker = "←",
 		icon_preset = {
-			{ "☕ ", "Journal" },
 			{ "✎ ", "Notes" },
 			{ "☐ ", "Todos" },
 			{ "☑ ", "Done" },
