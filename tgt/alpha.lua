@@ -20,7 +20,7 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
 	dashboard.button("o", "Open file browser", ":Ex<CR>"),
 	dashboard.button("f", "Find file", ":FZF<CR>"),
-  dashboard.button("m", "Open mind", ":MindOpenMain<CR>"),
+	dashboard.button("m", "Open mind", ":MindOpenMain<CR>"),
 	dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("q", "Quit", ":qa<CR>"),
 }
@@ -32,7 +32,7 @@ local function footer()
 		handle:close()
 		return result
 	end
-  return ""
+	return ""
 end
 
 dashboard.section.footer.val = footer()
