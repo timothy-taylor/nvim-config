@@ -7,6 +7,8 @@ n("<leader>l", "<cmd>lua vim.lsp.buf.format({ timeout = 5000 })<CR>")
 n("<leader>e", "<cmd>Lex 30<CR>")
 -- fuzzy finder, ctrl-v to open file in vertical split
 n("<leader>f", "<cmd>FZF<CR>")
+-- toggle git blame
+n("<leader>g", "<cmd>GitBlameToggle<CR>")
 
 -- navigate references
 n("<leader>n", '<cmd>lua require"illuminate".goto_next_reference(true)<CR>')

@@ -22,6 +22,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("goolord/alpha-nvim")
 	use("RRethy/vim-illuminate")
+  use("f-person/git-blame.nvim")
 
 	-- completion
 	use("hrsh7th/nvim-cmp")
