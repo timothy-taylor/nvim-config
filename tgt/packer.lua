@@ -22,7 +22,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("goolord/alpha-nvim")
 	use("RRethy/vim-illuminate")
-  use("f-person/git-blame.nvim")
+	use("f-person/git-blame.nvim")
 
 	-- completion
 	use("hrsh7th/nvim-cmp")
@@ -50,9 +50,4 @@ return packer.startup(function(use)
 	-- commenting
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-
-	use({
-		"phaazon/mind.nvim",
-		branch = "v2.2",
-	})
 end)
