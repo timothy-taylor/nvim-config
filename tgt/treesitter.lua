@@ -5,10 +5,10 @@ end
 
 configs.setup({
 	ensure_installed = {
-		-- "c",
+		"c",
 		"rust",
 		"css",
-		-- "astro",
+		"astro",
 		"bash",
 		"dot",
 		"dockerfile",
@@ -20,7 +20,7 @@ configs.setup({
 		"javascript",
 		"typescript",
 		"yaml",
-		-- "svelte",
+		"svelte",
 		"scss",
 		-- "ruby",
 		"regex",
