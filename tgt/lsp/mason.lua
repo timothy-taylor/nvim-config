@@ -1,10 +1,10 @@
 local servers = {
-	"sumneko_lua",
+	"lua_ls",
 	"jsonls",
 	"tsserver",
 	"rust_analyzer",
-  "astro",
-  "svelte",
+	"astro",
+	"svelte",
 }
 
 local settings = {
