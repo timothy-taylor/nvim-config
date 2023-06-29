@@ -43,6 +43,7 @@ configs.setup({
 		"supercollider",
 		"sql",
 		"tsx",
+		"zig",
 	},
 	sync_install = false,
 	ignore_install = { "" },

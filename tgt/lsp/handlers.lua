@@ -75,7 +75,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	if client.name == "tsserver" or "sumneko_lua" then
+	if client.name == "tsserver" or "lua_ls" or "rust_analyzer" then
 		-- use null-ls by default for formatting
 		client.server_capabilities.documentFormattingProvider = false
 	end
