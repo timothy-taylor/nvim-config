@@ -5,7 +5,6 @@ local servers = {
 	"rust_analyzer",
 	"astro",
 	"svelte",
-	"zls",
 }
 
 local settings = {
