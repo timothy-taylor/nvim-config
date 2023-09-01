@@ -1,4 +1,4 @@
-require("tgt.packer")
+require("tgt.lazy")
 require("tgt.setup")
 require("tgt.color")
 require("tgt.remap")

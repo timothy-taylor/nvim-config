@@ -8,7 +8,6 @@ illuminate.configure {
   delay = 200,
   filetypes_denylist = {
     "alpha",
-    "packer"
   },
   under_cursor = false,
 }

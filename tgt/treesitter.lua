@@ -16,7 +16,6 @@ configs.setup({
 		"git_rebase",
 		"lua",
 		"vim",
-		"help",
 		"javascript",
 		"typescript",
 		"yaml",
