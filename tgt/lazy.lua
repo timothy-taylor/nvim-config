@@ -34,14 +34,17 @@ local plugins = {
 
 	-- treesitter
 	{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-    "hiphish/rainbow-delimiters.nvim",
+	"hiphish/rainbow-delimiters.nvim",
 
 	-- commenting
 	"numToStr/Comment.nvim",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 
 	"zbirenbaum/copilot.lua",
-
+	{
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 }
 
 lazy.setup(plugins)
