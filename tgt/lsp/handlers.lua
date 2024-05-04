@@ -60,18 +60,16 @@ end
 local function lsp_keymaps(bufnr)
 	local m = vim.api.nvim_buf_set_keymap
 	local opts = { noremap = true, silent = true }
-	-- get various info: g+{D,d,i,l,r}
-	--m(bufnr, "n", "gD", "<cmd>:vsplit | lua vim.lsp.buf.declaration()<CR>", opts)
-	--m(bufnr, "n", "gd", "<cmd>:vsplit | lua vim.lsp.buf.definition()<CR>", opts)
+	-- get various info
 	m(bufnr, "n", "gi", "<cmd>:vsplit | lua vim.lsp.buf.implementation()<CR>", opts)
 	m(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded" })<CR>', opts)
 	m(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	m(bufnr, "n", "gk", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	m(bufnr, "n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	-- rename
 	m(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	-- move through diagnostics {[,]}+d
-	m(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-	m(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+	-- move through diagnostics
+	m(bufnr, "n", "g[", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+	m(bufnr, "n", "g]", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 end
 
 M.on_attach = function(client, bufnr)
