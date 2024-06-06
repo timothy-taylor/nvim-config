@@ -40,7 +40,6 @@ local plugins = {
 	"numToStr/Comment.nvim",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 
-	"zbirenbaum/copilot.lua",
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },

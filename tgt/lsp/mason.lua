@@ -1,11 +1,11 @@
 local servers = {
 	"lua_ls",
-	"jsonls",
 	"tsserver",
 	"rust_analyzer",
 	"astro",
 	"svelte",
 	"gopls",
+    "biome",
 }
 
 local settings = {

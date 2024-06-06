@@ -7,9 +7,6 @@ n("<leader>l", "<cmd>lua vim.lsp.buf.format({ timeout = 5000 })<CR>")
 n("<leader>f", "<cmd>FZF<CR>")
 -- toggle git blame
 n("<leader>g", "<cmd>GitBlameToggle<CR>")
--- toggle copilot
-n("<leader>c", '<cmd>lua require"copilot.suggestion".toggle_auto_trigger()<CR>')
-n("<leader>p", "<cmd>Copilot panel<CR>")
 
 -- navigate references
 n("<leader>n", '<cmd>lua require"illuminate".goto_next_reference(true)<CR>')

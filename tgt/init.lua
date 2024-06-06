@@ -9,7 +9,6 @@ require("tgt.autopairs")
 require("tgt.comment")
 require("tgt.alpha")
 require("tgt.blame")
-require("tgt.copilot")
 require("tgt.helpers")
 require("tgt.oil")
 
