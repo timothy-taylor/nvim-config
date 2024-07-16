@@ -5,7 +5,8 @@ local servers = {
 	"astro",
 	"svelte",
 	"gopls",
-    "biome",
+	"biome",
+	"tailwindcss",
 }
 
 local settings = {
