@@ -1,6 +1,7 @@
 local servers = {
 	"lua_ls",
-	"tsserver",
+	"denols",
+    "vtsls",
 	"rust_analyzer",
 	"astro",
 	"svelte",
@@ -36,10 +37,25 @@ end
 local opts = {}
 
 for _, server in pairs(servers) do
-	opts = {
-		on_attach = require("tgt.lsp.handlers").on_attach,
-		capabilities = require("tgt.lsp.handlers").capabilities,
-	}
+	if server == "vtsls" then
+		opts = {
+			on_attach = require("tgt.lsp.handlers").on_attach,
+			capabilities = require("tgt.lsp.handlers").capabilities,
+			root_dir = lspconfig.util.root_pattern("package.json"),
+			single_file_support = false,
+		}
+	elseif server == "denols" then
+		opts = {
+			on_attach = require("tgt.lsp.handlers").on_attach,
+			capabilities = require("tgt.lsp.handlers").capabilities,
+			root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+		}
+	else
+		opts = {
+			on_attach = require("tgt.lsp.handlers").on_attach,
+			capabilities = require("tgt.lsp.handlers").capabilities,
+		}
+	end
 
 	server = vim.split(server, "@")[1]
 
