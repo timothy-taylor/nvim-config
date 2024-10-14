@@ -18,7 +18,6 @@ dashboard.section.header.val = {
 	[[\_\/       \/___________/ \_\/           ]],
 }
 dashboard.section.buttons.val = {
-	dashboard.button("o", "Open file browser", ":Ex<CR>"),
 	dashboard.button("f", "Find file", ":FZF<CR>"),
 	dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("q", "Quit", ":qa<CR>"),
